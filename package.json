@@ -1,0 +1,38 @@
+{
+  "name": "@praha/renovate-approve-bot",
+  "private": true,
+  "description": "This is a bot that automatically approves PRs created by Renovate.",
+  "homepage": "https://github.com/praha-inc/renovate-approve-bot/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/praha-inc/renovate-approve-bot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praha-inc/renovate-approve-bot.git"
+  },
+  "license": "MIT",
+  "author": "PrAha, Inc.",
+  "type": "module",
+  "scripts": {
+    "generate": "wrangler types",
+    "build": "wrangler deploy --dry-run --outdir=dist",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "lint:code": "eslint .",
+    "lint:type": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@praha/eslint-config-common": "4.0.3",
+    "@praha/eslint-config-definer": "2.0.2",
+    "@praha/eslint-config-javascript": "3.0.11",
+    "@praha/eslint-config-style": "3.0.12",
+    "@praha/eslint-config-typescript": "3.0.12",
+    "@tsconfig/strictest": "2.0.8",
+    "eslint": "9.39.3",
+    "typescript": "5.9.3",
+    "vitest": "4.0.18",
+    "wrangler": "4.67.0"
+  },
+  "packageManager": "pnpm@10.30.1"
+}
